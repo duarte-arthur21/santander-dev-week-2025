@@ -30,9 +30,8 @@ classDiagram
         -String description
     }
 
-    Usuario --> Conta : possui
-    Usuario --> Cartao : possui
-    Usuario --> "0..*" Feature : tem
-    Usuario --> "0..*" Noticia : recebe
-
+    Usuario "1" *--> "1" Conta : possui
+    Usuario "1" *--> "N" Feature : tem
+    Usuario "1" *--> "1" Cartao : possui
+    Usuario "1" *--> "N" Noticia : recebe
 ```
