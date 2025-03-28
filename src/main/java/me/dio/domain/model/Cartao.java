@@ -13,7 +13,7 @@ public class Cartao {
     @Column(unique = true)
     private String numero;
 
-    @Column(name = "limite_disponivel", precision = 2, scale = 13)
+    @Column(name = "limite_disponivel", precision = 13, scale = 2)
     private BigDecimal limite;
 
     private Double saldo;
@@ -52,5 +52,9 @@ public class Cartao {
     public Double getSaldo() {
         return saldo;
     }
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
+    }
+    
 
 }

@@ -15,10 +15,10 @@ public class Conta {
 
     private String agencia;
 
-    @Column(name = "balanco", precision = 2, scale = 13)
+    @Column(name = "balanco", precision = 13, scale = 2)
     private BigDecimal balanco;
 
-    @Column(name = "limite_adicional", precision = 2, scale = 13)
+    @Column(name = "limite_adicional", precision = 13, scale = 2)
     private BigDecimal limite;
 
     private Double saldo;
