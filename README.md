@@ -3,7 +3,7 @@ Java RESTful API criada para a Santander Dev Week.
 
 ## Diagrama de Classes
 
-``` Mermaid
+```mermaid
 classDiagram
     class Usuario {
         -String name
