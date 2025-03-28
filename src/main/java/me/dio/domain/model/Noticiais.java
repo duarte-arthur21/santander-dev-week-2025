@@ -1,5 +1,8 @@
 package me.dio.domain.model;
 
-public class Noticiais {
+import jakarta.persistence.*;
+
+@Entity(name = "tb_noticiais")
+public class Noticiais extends BaseItem {
 
 }
