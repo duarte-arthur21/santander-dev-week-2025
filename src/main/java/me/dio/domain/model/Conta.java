@@ -2,15 +2,25 @@ package me.dio.domain.model;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@Entity(name = "tb_usuario")
 public class Conta {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(unique = true)
     private String numero;
+
     private String agencia;
+
+    @Column(name = "balanco", precision = 2, scale = 13)
     private BigDecimal balanco;
+
+    @Column(name = "balanco", precision = 2, scale = 13)
     private BigDecimal limite;
+
     private Double saldo;
     private Usuario usuario;
     private Cartao cartao;
