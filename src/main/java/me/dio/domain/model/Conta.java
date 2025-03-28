@@ -18,7 +18,7 @@ public class Conta {
     @Column(name = "balanco", precision = 2, scale = 13)
     private BigDecimal balanco;
 
-    @Column(name = "balanco", precision = 2, scale = 13)
+    @Column(name = "limite_adicional", precision = 2, scale = 13)
     private BigDecimal limite;
 
     private Double saldo;
