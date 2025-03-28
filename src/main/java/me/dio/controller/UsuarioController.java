@@ -1,9 +1,9 @@
 package me.dio.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import me.dio.domain.model.Usuario;
 import java.net.URI;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import me.dio.service.UsuarioService;
 
