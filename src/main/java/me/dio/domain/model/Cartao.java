@@ -2,20 +2,24 @@ package me.dio.domain.model;
 
 import java.math.BigDecimal;
 
+import jakarta.persistence.*;
+
+@Entity(name = "tb_cartao")
 public class Cartao {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(unique = true)
     private String numero;
-    private String validade;
-    private String cvv;
-    private String bandeira;
+
+    @Column(name = "limite", precision = 2, scale = 13)
     private BigDecimal limite;
+
     private Double saldo;
 
-    public Cartao(String numero, String validade, String cvv, String bandeira, BigDecimal limite) {
+    public Cartao(String numero, BigDecimal limite) {
         this.numero = numero;
-        this.validade = validade;
-        this.cvv = cvv;
-        this.bandeira = bandeira;
         this.limite = limite;
         this.saldo = 0.0; // Inicializa o saldo como 0.0
     }
@@ -35,30 +39,6 @@ public class Cartao {
 
     public void setNumero(String numero) {
         this.numero = numero;
-    }
-
-    public String getValidade() {
-        return validade;
-    }
-
-    public void setValidade(String validade) {
-        this.validade = validade;
-    }
-
-    public String getCvv() {
-        return cvv;
-    }
-
-    public void setCvv(String cvv) {
-        this.cvv = cvv;
-    }
-
-    public String getBandeira() {
-        return bandeira;
-    }
-
-    public void setBandeira(String bandeira) {
-        this.bandeira = bandeira;
     }
 
     public BigDecimal getLimite() {
