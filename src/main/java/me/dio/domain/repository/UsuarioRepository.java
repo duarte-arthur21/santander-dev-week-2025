@@ -7,6 +7,6 @@ import me.dio.domain.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    
+    boolean existsByNumeroConta(String numeroConta); // Verifica se o número da conta já existe no banco de dados
 
 }
